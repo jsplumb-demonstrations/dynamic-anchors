@@ -1,4 +1,4 @@
-jsPlumb.ready(function () {
+jsPlumbBrowserUI.ready(function () {
 
     var sourceAnchors = [
             [0.2, 0, 0, -1, 0, 0, "foo"],
@@ -50,7 +50,7 @@ jsPlumb.ready(function () {
             connectorOverlays: overlays
         };
 
-    var instance = jsPlumb.newInstance({
+    var instance = jsPlumbBrowserUI.newInstance({
         dragOptions: { cursor: 'pointer', zIndex: 2000 },
         container: "canvas"
     });
@@ -74,7 +74,7 @@ jsPlumb.ready(function () {
         // add endpoints to all of these - one for source, and one for target, configured so they don't sit
         // on top of each other.
         for (var i = 0; i < divsWithWindowClass.length; i++) {
-            var id = instance.getId(divsWithWindowClass[i]);
+            var id = divsWithWindowClass[i].getAttribute("id")
             endpoints[id] = [
                 // note the three-arg version of addEndpoint; lets you re-use some common settings easily.
                 instance.addEndpoint(document.getElementById(id), anEndpoint, {anchor: sourceAnchors}),
