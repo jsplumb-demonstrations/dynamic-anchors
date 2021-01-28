@@ -52,7 +52,7 @@ jsPlumbBrowserUI.ready(function () {
 
     var instance = jsPlumbBrowserUI.newInstance({
         dragOptions: { cursor: 'pointer', zIndex: 2000 },
-        container: "canvas"
+        container: canvas
     });
 
     // suspend drawing and initialise.
