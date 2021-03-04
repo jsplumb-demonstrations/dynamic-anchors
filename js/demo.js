@@ -14,12 +14,7 @@ jsPlumbBrowserUI.ready(function () {
         ],
 
         exampleColor = '#00f',
-        exampleDropOptions = {
-            tolerance: 'touch',
-            hoverClass: 'dropHover',
-            activeClass: 'dragActive'
-        },
-        connector = [ "Bezier", { cssClass: "connectorClass", hoverClass: "connectorHoverClass" } ],
+        connector = { type:"Bezier", options:{ cssClass: "connectorClass", hoverClass: "connectorHoverClass" } },
         connectorStyle = {
             gradient: {stops: [
                 [0, exampleColor],
@@ -33,9 +28,9 @@ jsPlumbBrowserUI.ready(function () {
             stroke: "#449999"
         },
         overlays = [
-            ["Diamond", { fill: "#09098e", width: 15, length: 15 } ]
+            { type:"Diamond", options:{ fill: "#09098e", width: 15, length: 15 } }
         ],
-        endpoint = ["Dot", { cssClass: "endpointClass", radius: 10, hoverClass: "endpointHoverClass" } ],
+        endpoint = { type:"Dot", options:{ cssClass: "endpointClass", radius: 10, hoverClass: "endpointHoverClass" } },
         endpointStyle = { fill: exampleColor },
         anEndpoint = {
             endpoint: endpoint,

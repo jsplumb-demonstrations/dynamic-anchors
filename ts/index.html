@@ -8,12 +8,11 @@
         <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
         <link rel="stylesheet" href="node_modules/@jsplumb/browser-ui/css/jsplumbtoolkit.css">
-        <link rel="stylesheet" href="demo.css">
+        <link rel="stylesheet" href="../demo.css">
     </head>
     <body>
 
         <div class="jtk-demo-main">
-			<!-- demo -->
             <div class="jtk-demo-canvas canvas-wide dynamic-demo jtk-surface jtk-surface-nopan" id="canvas">
                 <div class="window" id="dynamicWindow1"><strong>1</strong><br/><br/></div>
                 <div class="window" id="dynamicWindow2"><strong>2</strong><br/><br/></div>
@@ -22,25 +21,15 @@
                 <div class="window" id="dynamicWindow5"><strong>5</strong><br/><br/></div>
                 <div class="window" id="dynamicWindow6"><strong>6</strong><br/><br/></div>
             </div>
-            <!-- /demo -->
-            <!-- explanation -->
             <div class="description">
                 <h4>DYNAMIC ANCHORS</h4>
                 <p>This is a demonstration of anchors that change position dependent on the location of the other element in a connection. Each Connection is decorated with a Diamond overlay, located halfway along the connector.</p>
                 <p>You can drag new connections between Endpoints.</p>
                 <p>Endpoints support an unlimited number of Connections.</p>
             </div>
-            <!-- /explanation -->
         </div>
 
-
-        <!-- JS -->
-        <script src="node_modules/@jsplumb/community-core/js/jsplumb.core.umd.js"></script>
-        <script src="node_modules/@jsplumb/browser-ui/js/jsplumb.browser-ui.umd.js"></script>
-        <!-- /JS -->
-
-		<!--  demo code -->
-		<script src="demo.js"></script>
+        <script src="_build/demo.umd.js"></script>
 
     </body>
 </html>
