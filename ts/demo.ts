@@ -5,7 +5,8 @@ import {
     EVENT_CLICK,
     INTERCEPT_BEFORE_DETACH,
     Connection,
-    DotEndpoint
+    DotEndpoint,
+    DiamondOverlay
 } from "@jsplumb/core"
 
 ready( () => {
@@ -40,7 +41,7 @@ ready( () => {
             stroke: "#449999"
         },
         overlays = [
-            {type: "Diamond", options: {fill: "#09098e", width: 15, length: 15}}
+            {type: DiamondOverlay.type, options: {fill: "#09098e", width: 15, length: 15, location:0.5}}
         ],
         endpoint = {type: DotEndpoint.type, options: {cssClass: "endpointClass", radius: 10, hoverClass: "endpointHoverClass"}},
         endpointStyle = {fill: exampleColor},
@@ -48,8 +49,6 @@ ready( () => {
             endpoint: endpoint,
             paintStyle: endpointStyle,
             hoverPaintStyle: {fill: "#449999"},
-            isSource: true,
-            isTarget: true,
             maxConnections: -1,
             connector: connector,
             connectorStyle: connectorStyle,

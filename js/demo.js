@@ -28,7 +28,7 @@ jsPlumbBrowserUI.ready(function () {
             stroke: "#449999"
         },
         overlays = [
-            { type:"Diamond", options:{ fill: "#09098e", width: 15, length: 15 } }
+            { type:"Diamond", options:{  fill: "#09098e", width: 15, length: 15, location:0.5 } }
         ],
         endpoint = { type:"Dot", options:{ cssClass: "endpointClass", radius: 10, hoverClass: "endpointHoverClass" } },
         endpointStyle = { fill: exampleColor },
@@ -36,8 +36,6 @@ jsPlumbBrowserUI.ready(function () {
             endpoint: endpoint,
             paintStyle: endpointStyle,
             hoverPaintStyle: { fill: "#449999" },
-            isSource: true,
-            isTarget: true,
             maxConnections: -1,
             connector: connector,
             connectorStyle: connectorStyle,
